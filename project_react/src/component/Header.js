@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 class Header extends Component {
   render() {
@@ -7,8 +7,8 @@ class Header extends Component {
       <div >
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-0" >
       <div class="container py-auto">
-        <a className="navbar-brand" href="index.html" ><img src="./img/petlogo4.png" width='50px' height='50px' alt=""/></a>
-        <a className="navbar-brand" href="plist1.html" >Belanja</a>
+        <Link to ="/" className="navbar-brand"  ><img src="./img/petlogo4.png" width='50px' height='50px' alt=""/></Link>
+        <Link to = "/productlist" className="navbar-brand">Belanja</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -20,13 +20,13 @@ class Header extends Component {
           <ul className="navbar-nav ml-auto">
             
             <li className="nav-item">
-              <a className="nav-link" href="cart1.html"><img src="./img/icons8-shopping-cart-50.png" alt="" style={{height: '25px', width: '25px'}}/></a>
+              <Link to = "/cart" className="nav-link"><img src="./img/icons8-shopping-cart-50.png" alt="" style={{height: '25px', width: '25px'}}/></Link>
             </li>
             <li className="nav-item">
-              <a href ="/registration" className="nav-link">Register</a>
+              <Link to = "/registration" className="nav-link">Register</Link>
             </li>
             <li className="nav-item">
-              <a href="login.html" className="nav-link">Login</a>
+              <Link to = "/login" className="nav-link">Login</Link>
             </li>
           </ul>
         </div>
